@@ -5,12 +5,16 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class MetaDto {
+public class KakaoApiResponseDto {
 
-    @JsonProperty("total_count")
-    private Integer totalCount;
+    @JsonProperty("meta")
+    private MetaDto metaDto;
 
+    @JsonProperty("documents")
+    private List<DocumentDto> documentList;
 }
